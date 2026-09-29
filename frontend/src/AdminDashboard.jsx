@@ -8,8 +8,7 @@ function AdminDashboard() {
     const token =
       localStorage.getItem("rainfall_token");
 
-    fetch(
-      ${import.meta.env.VITE_API_URL}/api/...
+    fetch(`${import.meta.env.VITE_API_URL}/api/admin/login`,
       {
         method: "GET",
         headers: {

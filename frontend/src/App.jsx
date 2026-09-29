@@ -1217,8 +1217,7 @@ const [forecastValidUntil, setForecastValidUntil] = useState(
       setVoiceLoading(true);
 
       const response =
-        await fetch(
-          ${import.meta.env.VITE_API_URL}/api/...
+        await fetch(`${import.meta.env.VITE_API_URL}/api/admin/login`,
           {
             method: "POST",
 

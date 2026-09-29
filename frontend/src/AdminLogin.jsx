@@ -11,8 +11,7 @@ function AdminLogin() {
     e.preventDefault();
 
     try {
-      const response = await fetch(
-        ${import.meta.env.VITE_API_URL}/api/...
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/login`,
         {
           method: "POST",
           headers: {
