@@ -9,7 +9,7 @@ function AdminDashboard() {
       localStorage.getItem("rainfall_token");
 
     fetch(
-      "http://localhost:5000/api/admin/dashboard",
+      ${import.meta.env.VITE_API_URL}/api/...
       {
         method: "GET",
         headers: {
