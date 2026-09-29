@@ -1,0 +1,4 @@
+﻿node_modules/
+*.wav
+hindi.txt
+frontend/dist/

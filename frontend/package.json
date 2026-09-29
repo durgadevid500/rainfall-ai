@@ -1,0 +1,28 @@
+{
+  "name": "rainfall-ai-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "i18next": "^26.4.2",
+    "leaflet": "^1.9.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^17.0.15",
+    "react-leaflet": "^4.2.1",
+    "react-router-dom": "^7.18.4",
+    "recharts": "^2.15.0",
+    "vardhan-maps": "^0.18.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.0",
+    "vite-plugin-pwa": "^1.3.0"
+  }
+}

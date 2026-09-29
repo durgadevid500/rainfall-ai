@@ -1,0 +1,13 @@
+services:
+  backend:
+    build: ./docker/backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATA_MODE=synthetic
+  frontend:
+    build: ./docker/frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
