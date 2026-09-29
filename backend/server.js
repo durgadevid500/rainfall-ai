@@ -12,17 +12,28 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// ===============================
+// PORT
+// ===============================
 const PORT = process.env.PORT || 5000;
+
 const JWT_SECRET =
   process.env.JWT_SECRET || "rainfall-ai-dev-secret";
 
 // ===============================
 // Piper executable
+// Windows  -> piper.exe
+// Linux    -> piper
 // ===============================
+const piperExecutable =
+  process.platform === "win32"
+    ? "piper.exe"
+    : "piper";
+
 const piperPath = path.join(
   __dirname,
   "piper",
-  "piper.exe"
+  piperExecutable
 );
 
 // ===============================
@@ -241,7 +252,9 @@ app.post("/api/voice", (req, res) => {
   // Check Piper
   if (!fs.existsSync(piperPath)) {
     return res.status(500).json({
-      error: "Piper executable not found",
+      error:
+        "Piper executable not found: " +
+        piperExecutable,
     });
   }
 
@@ -300,6 +313,7 @@ app.post("/api/voice", (req, res) => {
         return res.status(500).json({
           error:
             "Piper voice generation failed",
+          details: errorOutput,
         });
       }
 
@@ -323,12 +337,32 @@ app.post("/api/voice", (req, res) => {
       );
     }
   );
+
+  // Piper process error
+  piper.on(
+    "error",
+    (error) => {
+      console.error(
+        "Piper process error:",
+        error
+      );
+
+      if (!res.headersSent) {
+        return res.status(500).json({
+          error:
+            "Unable to start Piper",
+          details:
+            error.message,
+        });
+      }
+    }
+  );
 });
 
 // ===============================
 // START SERVER
 // ===============================
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(
     "Backend running on port " +
       PORT
