@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "@google-cloud/text-to-speech": "^7.1.0",
     "bcryptjs": "^3.0.3",
