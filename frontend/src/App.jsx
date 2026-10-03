@@ -1234,7 +1234,9 @@ const [forecastValidUntil, setForecastValidUntil] = useState(
               language,
             }),
           }
-        );
+                );
+
+      console.timeEnd("VOICE API");
 
       if (!response.ok) {
         const errorText =
