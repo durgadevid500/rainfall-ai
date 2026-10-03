@@ -1110,3 +1110,223 @@ body {
   border-bottom: 1px solid #9ca3af;
   letter-spacing: .5px;
 }
+/* =========================
+   INNOVATIVE TEAM SECTION
+========================= */
+
+.team-section {
+  margin-top: 50px;
+  padding: 55px 25px 70px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-header {
+  margin-bottom: 45px;
+}
+
+.team-header h2 {
+  margin: 10px 0 8px;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.team-header p {
+  margin: 0;
+  opacity: 0.7;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.team-line {
+  display: inline-block;
+  width: 55px;
+  height: 2px;
+  margin: 0 12px;
+  vertical-align: middle;
+  background: currentColor;
+  opacity: 0.5;
+}
+
+/* Orbit area */
+
+.team-orbit {
+  max-width: 1000px;
+  min-height: 560px;
+  margin: auto;
+  position: relative;
+}
+
+/* Center */
+
+.team-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.07);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 0 25px rgba(100, 180, 255, 0.2),
+    inset 0 0 25px rgba(255, 255, 255, 0.05);
+
+  z-index: 5;
+}
+
+.rain-icon {
+  font-size: 38px;
+  margin-bottom: 5px;
+}
+
+.team-center h3 {
+  margin: 0;
+  font-size: 17px;
+  letter-spacing: 1.5px;
+}
+
+.team-center span {
+  margin-top: 5px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  opacity: 0.6;
+}
+
+/* Connecting ring */
+
+.team-orbit::before {
+  content: "";
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Cards */
+
+.team-card {
+  position: absolute;
+  width: 190px;
+  padding: 20px 15px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(10px);
+
+  transition: all 0.3s ease;
+  z-index: 4;
+}
+
+.team-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.member-icon {
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+
+.team-card h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.team-card p {
+  margin: 7px 0 0;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  opacity: 0.65;
+}
+
+/* Member positions */
+
+.team-1 {
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.team-2 {
+  top: 145px;
+  left: 25px;
+}
+
+.team-3 {
+  top: 145px;
+  right: 25px;
+}
+
+.team-4 {
+  bottom: 85px;
+  left: 70px;
+}
+
+.team-5 {
+  bottom: 85px;
+  right: 70px;
+}
+
+.team-6 {
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Keep hover smooth for centered cards */
+
+.team-1:hover,
+.team-6:hover {
+  transform: translateX(-50%) translateY(-8px) scale(1.04);
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .team-orbit {
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .team-orbit::before,
+  .team-center {
+    display: none;
+  }
+
+  .team-card {
+    position: relative;
+    width: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    transform: none !important;
+  }
+
+  .team-card:hover {
+    transform: translateY(-5px) scale(1.02) !important;
+  }
+
+}

@@ -2612,6 +2612,64 @@ const [forecastValidUntil, setForecastValidUntil] = useState(
         </div>
 
       </section>
+            {/* TEAM MEMBERS */}
+
+<section className="team-section">
+
+  <div className="team-header">
+    <span className="team-line"></span>
+    <h2>🌧️ The People Behind Rainfall AI</h2>
+    <span className="team-line"></span>
+    <p>Meet Our Team</p>
+  </div>
+
+  <div className="team-orbit">
+
+    <div className="team-center">
+      <div className="rain-icon">🌧️</div>
+      <h3>RAINFALL AI</h3>
+      <span>OUR TEAM</span>
+    </div>
+
+    <div className="team-card team-1">
+      <div className="member-icon">👑</div>
+      <h3>Priya Dharashini B</h3>
+      <p>TEAM LEAD</p>
+    </div>
+
+    <div className="team-card team-2">
+      <div className="member-icon">👤</div>
+      <h3>Durga Devi S</h3>
+      <p>TEAM MEMBER</p>
+    </div>
+
+    <div className="team-card team-3">
+      <div className="member-icon">👤</div>
+      <h3>Nivetha B</h3>
+      <p>TEAM MEMBER</p>
+    </div>
+
+    <div className="team-card team-4">
+      <div className="member-icon">👤</div>
+      <h3>Reshma Ranjani S</h3>
+      <p>TEAM MEMBER</p>
+    </div>
+
+    <div className="team-card team-5">
+      <div className="member-icon">👤</div>
+      <h3>Karthiga M</h3>
+      <p>TEAM MEMBER</p>
+    </div>
+
+    <div className="team-card team-6">
+      <div className="member-icon">👤</div>
+      <h3>Saranya p</h3>
+      <p>TEAM MEMBER</p>
+    </div>
+
+  </div>
+
+</section>
 
     </div>
   );
