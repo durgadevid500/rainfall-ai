@@ -1215,6 +1215,8 @@ const [forecastValidUntil, setForecastValidUntil] = useState(
 
     try {
       setVoiceLoading(true);
+      console.time("VOICE API");
+      console.log("VOICE TEXT:", text);
 
       const response =
   await fetch(`${import.meta.env.VITE_API_URL}/api/voice`,
