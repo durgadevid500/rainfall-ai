@@ -13,7 +13,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://rainfall-ai-wcsw-llcptuj1i-techtides.vercel.app"
+      "https://rainfall-ai-wcsw-llcptuj1i-techtides.vercel.app",
+      "https://rainfall-ai-wcsw.vercel.app"
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
