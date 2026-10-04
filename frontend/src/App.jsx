@@ -2663,7 +2663,7 @@ const [forecastValidUntil, setForecastValidUntil] = useState(
 
     <div className="team-card team-6">
       <div className="member-icon">👤</div>
-      <h3>Saranya p</h3>
+      <h3>Saranya P</h3>
       <p>TEAM MEMBER</p>
     </div>
 
